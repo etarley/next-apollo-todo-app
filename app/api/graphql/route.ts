@@ -4,14 +4,11 @@ import { gql } from 'graphql-tag';
 import { NextRequest } from 'next/server';
 import { category, task, taskStatus, user } from '@/lib/graphql/schemas';
 
-
-
-
 const typeDefs = gql`
   ${category},
   ${task},
   ${taskStatus},
-  ${user}
+  ${user},
 `;
 
 const resolvers = {

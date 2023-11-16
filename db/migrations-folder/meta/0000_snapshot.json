@@ -94,12 +94,8 @@
           "name": "tasks_userID_users_id_fk",
           "tableFrom": "tasks",
           "tableTo": "users",
-          "columnsFrom": [
-            "userID"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userID"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -107,12 +103,8 @@
           "name": "tasks_statusID_taskStatus_statusID_fk",
           "tableFrom": "tasks",
           "tableTo": "taskStatus",
-          "columnsFrom": [
-            "statusID"
-          ],
-          "columnsTo": [
-            "statusID"
-          ],
+          "columnsFrom": ["statusID"],
+          "columnsTo": ["statusID"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -186,16 +178,12 @@
       "indexes": {
         "users_username_unique": {
           "name": "users_username_unique",
-          "columns": [
-            "username"
-          ],
+          "columns": ["username"],
           "isUnique": true
         },
         "users_email_unique": {
           "name": "users_email_unique",
-          "columns": [
-            "email"
-          ],
+          "columns": ["email"],
           "isUnique": true
         }
       },
