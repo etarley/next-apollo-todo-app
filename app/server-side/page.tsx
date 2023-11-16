@@ -19,7 +19,6 @@ export default async function ServerSide() {
     query,
   });
 
-
   return (
     <main>
       <h1>{data.data.hello}</h1>

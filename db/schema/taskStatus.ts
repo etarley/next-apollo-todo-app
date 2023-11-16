@@ -1,3 +1,13 @@
-import { sqliteTable } from 'drizzle-orm/sqlite-core';
+import {
+  sqliteTable,
+  integer,
+  text,
+  uniqueIndex,
+} from 'drizzle-orm/sqlite-core';
 
-const taskStatus = sqliteTable();
+export const taskStatus = sqliteTable('taskStatus', {
+  statusID: integer('statusID', { mode: 'number' }).primaryKey({
+    autoIncrement: true,
+  }),
+  statusName: text('statusName').notNull(),
+});
