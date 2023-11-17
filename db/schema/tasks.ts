@@ -5,7 +5,6 @@ import {
   uniqueIndex,
 } from 'drizzle-orm/sqlite-core';
 import { users } from './users';
-import { taskStatus } from './taskStatus';
 import { sql } from 'drizzle-orm';
 
 export const tasks = sqliteTable('tasks', {
@@ -16,10 +15,8 @@ export const tasks = sqliteTable('tasks', {
   title: text('title').notNull(),
   description: text('description'),
   dueDate: integer('dueDate', { mode: 'timestamp' }),
-  statusID: integer('statusID', { mode: 'number' }).references(
-    () => taskStatus.statusID
-  ),
+  status : text('status', {enum:['PENDING', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD', 'CANCELLED']}),
   dateCreated: integer('dateCreated', { mode: 'timestamp' }).default(
-    sql`CURRENT_TIMESTAMP`
+    sql`CURRENT_TIMESTAMP`,
   ),
 });
