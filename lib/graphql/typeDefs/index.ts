@@ -8,4 +8,12 @@ import taskStatus from './taskStatus';
 import user from './user';
 
 // Exporting all schemas
-export { category, task, taskStatus, user, queries, mutations, taskOrderByInput };
+export {
+  category,
+  task,
+  taskStatus,
+  user,
+  queries,
+  mutations,
+  taskOrderByInput,
+};

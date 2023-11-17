@@ -15,7 +15,9 @@ export const tasks = sqliteTable('tasks', {
   title: text('title').notNull(),
   description: text('description'),
   dueDate: integer('dueDate', { mode: 'timestamp' }),
-  status : text('status', {enum:['PENDING', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD', 'CANCELLED']}),
+  status: text('status', {
+    enum: ['PENDING', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD', 'CANCELLED'],
+  }),
   dateCreated: integer('dateCreated', { mode: 'timestamp' }).default(
     sql`CURRENT_TIMESTAMP`,
   ),
