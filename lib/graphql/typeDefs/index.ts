@@ -2,6 +2,7 @@
 import category from './category';
 import mutations from './mutations';
 import queries from './queries';
+import structuredResponses from './structuredResponses';
 import task from './task';
 import taskOrderByInput from './taskOrderByInput';
 import taskStatus from './taskStatus';
@@ -16,4 +17,5 @@ export {
   queries,
   mutations,
   taskOrderByInput,
+  structuredResponses,
 };

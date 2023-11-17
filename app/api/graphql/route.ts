@@ -10,6 +10,7 @@ import {
   taskStatus,
   user,
   taskOrderByInput,
+  structuredResponses,
 } from '@/lib/graphql/typeDefs';
 
 const typeDefs = gql`
@@ -29,6 +30,7 @@ const typeDefs = gql`
 
   #Mutations types definitions
   ${mutations}
+  ${structuredResponses}
 
   #Input types definitions
   ${taskOrderByInput}
