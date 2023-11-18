@@ -1,16 +1,16 @@
-import { startServerAndCreateNextHandler } from '@as-integrations/next';
-import { ApolloServer } from '@apollo/server';
-import { gql } from 'graphql-tag';
-import { NextRequest } from 'next/server';
 import {
   category,
   mutations,
   queries,
   task,
+  taskOrderByInput,
   taskStatus,
   user,
-  taskOrderByInput,
 } from '@/lib/graphql/typeDefs';
+import { ApolloServer } from '@apollo/server';
+import { startServerAndCreateNextHandler } from '@as-integrations/next';
+import { gql } from 'graphql-tag';
+import { NextRequest } from 'next/server';
 
 const typeDefs = gql`
   #server test

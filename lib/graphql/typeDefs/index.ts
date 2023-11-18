@@ -10,10 +10,10 @@ import user from './user';
 // Exporting all schemas
 export {
   category,
+  mutations,
+  queries,
   task,
+  taskOrderByInput,
   taskStatus,
   user,
-  queries,
-  mutations,
-  taskOrderByInput,
 };
