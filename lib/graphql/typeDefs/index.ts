@@ -13,9 +13,9 @@ export {
   category,
   mutations,
   queries,
+  structuredResponses,
   task,
   taskOrderByInput,
   taskStatus,
   user,
-  structuredResponses
 };

@@ -1,16 +1,13 @@
+import { addCategory } from '@/lib/graphql/resolvers/';
 import {
   category,
   mutations,
   queries,
+  structuredResponses,
   task,
   taskOrderByInput,
   taskStatus,
   user,
-<<<<<<< HEAD
-=======
-  taskOrderByInput,
-  structuredResponses,
->>>>>>> 63f1448e0a53a5ec7d3917bc9ca91ec955768fe5
 } from '@/lib/graphql/typeDefs';
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
@@ -23,14 +20,21 @@ const typeDefs = gql`
     hello: String
   }
 
+  type Query {
+    numberSix: Int! # Should always return the number 6 when queried
+    numberSeven: Int! # Should always return 7
+  }
+
   #Schema definitions
   ${category}
   ${task}
-  ${taskStatus}
   ${user}
 
   #Query Types definitions
   ${queries}
+
+  #Enum Types
+  ${taskStatus}
 
   #Mutations types definitions
   ${mutations}
@@ -42,7 +46,17 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
+    // server tests
     hello: () => 'world',
+    numberSix() {
+      return 6;
+    },
+    numberSeven() {
+      return 7;
+    },
+  },
+  Mutation: {
+    addCategory,
   },
 };
 const server = new ApolloServer({
