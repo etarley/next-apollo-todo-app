@@ -6,6 +6,11 @@ import {
   taskOrderByInput,
   taskStatus,
   user,
+<<<<<<< HEAD
+=======
+  taskOrderByInput,
+  structuredResponses,
+>>>>>>> 63f1448e0a53a5ec7d3917bc9ca91ec955768fe5
 } from '@/lib/graphql/typeDefs';
 import { ApolloServer } from '@apollo/server';
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
@@ -29,6 +34,7 @@ const typeDefs = gql`
 
   #Mutations types definitions
   ${mutations}
+  ${structuredResponses}
 
   #Input types definitions
   ${taskOrderByInput}

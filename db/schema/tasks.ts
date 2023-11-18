@@ -1,11 +1,6 @@
-import {
-  sqliteTable,
-  integer,
-  text,
-  uniqueIndex,
-} from 'drizzle-orm/sqlite-core';
-import { users } from './users';
 import { sql } from 'drizzle-orm';
+import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { users } from './users';
 
 export const tasks = sqliteTable('tasks', {
   taskID: integer('taskID', { mode: 'number' }).primaryKey({
