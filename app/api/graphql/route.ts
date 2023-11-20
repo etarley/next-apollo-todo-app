@@ -1,6 +1,6 @@
-import { addCategory } from '@/lib/graphql/resolvers/';
+// import { addCategory } from '@/lib/graphql/resolvers/';
+import { addTask, addUser } from '@/lib/graphql/resolvers';
 import {
-  category,
   mutations,
   queries,
   structuredResponses,
@@ -26,7 +26,6 @@ const typeDefs = gql`
   }
 
   #Schema definitions
-  ${category}
   ${task}
   ${user}
 
@@ -56,7 +55,8 @@ const resolvers = {
     },
   },
   Mutation: {
-    addCategory,
+    addTask,
+    addUser
   },
 };
 const server = new ApolloServer({

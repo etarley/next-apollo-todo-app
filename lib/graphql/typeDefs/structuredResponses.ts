@@ -1,10 +1,10 @@
 const structuredResponses = `#graphql
-type CategoryResponse {
-  code: String!
-  success: Boolean!
-  message: String!
-  category: Category
-}
+# type CategoryResponse {
+#   code: String!
+#   success: Boolean!
+#   message: String!
+#   category: Category
+# }
 
 type TaskResponse {
   code: String!

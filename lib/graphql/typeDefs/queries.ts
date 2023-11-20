@@ -1,10 +1,10 @@
 const queries = `#graphql
 type Query {
   # Query to get a list of all categories
-  allCategories: CategoryResponse
+  # allCategories: CategoryResponse
 
   # Query to get a specific category by ID
-  category(categoryID: ID!): CategoryResponse
+  # category(categoryID: ID!): CategoryResponse
 
   # Query to get a list of all tasks
   allTasks(orderBy: TaskOrderByInput, status: TaskStatus, userID: ID, dueDateRange: [Int]): TaskResponse

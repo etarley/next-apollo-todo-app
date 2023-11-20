@@ -1,12 +1,12 @@
 const mutations = `#graphql
 type Mutation {
   # Mutations for Categories
-  addCategory(name: String!, description: String): CategoryResponse
-  updateCategory(categoryID: ID!, name: String, description: String): CategoryResponse
-  deleteCategory(categoryID: ID!): CategoryResponse
+  # addCategory(name: String!, description: String): CategoryResponse
+  # updateCategory(categoryID: ID!, name: String, description: String): CategoryResponse
+  # deleteCategory(categoryID: ID!): CategoryResponse
 
   # Mutations for Tasks
-  addTask(userID: ID, title: String!, description: String, dueDate: Int, status: TaskStatus): TaskResponse
+  addTask(userID: ID, title: String!, description: String, dueDate: String, status: TaskStatus): TaskResponse
   updateTask(taskID: ID!, userID: ID, title: String, description: String, dueDate: Int, status: TaskStatus): TaskResponse
   deleteTask(taskID: ID!): TaskResponse
 

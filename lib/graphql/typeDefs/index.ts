@@ -1,5 +1,5 @@
 // Importing each schema from its respective file
-import category from './category';
+// import category from './category';
 import mutations from './mutations';
 import queries from './queries';
 import structuredResponses from './structuredResponses';
@@ -10,7 +10,7 @@ import user from './user';
 
 // Exporting all schemas
 export {
-  category,
+  // category,
   mutations,
   queries,
   structuredResponses,

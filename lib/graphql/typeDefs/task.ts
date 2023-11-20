@@ -1,7 +1,7 @@
 const task = `#graphql
 type Task {
   taskID: ID!
-  user: User
+  userID: ID
   title: String!
   description: String
   dueDate: Int

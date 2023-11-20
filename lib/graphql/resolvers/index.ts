@@ -1,3 +1,4 @@
-import { addCategory } from './addCategory';
+import { addTask } from "./addTask";
+import { addUser } from "./addUser";
 
-export { addCategory };
+export {addTask, addUser}
