@@ -4,7 +4,7 @@ type User {
   username: String
   email: String
   passwordHash: String
-  dateCreated: Int
+  dateCreated: Timestamp
   tasks: [Task]
 }`;
 

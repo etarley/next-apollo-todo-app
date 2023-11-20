@@ -16,12 +16,12 @@ export enum TaskStatus {
 
 export interface Task {
   description: string | null;
-    taskID: number;
-    userID: number | null;
-    dateCreated: Date | null;
-    title: string;
-    dueDate: Date | null;
-    status: "PENDING" | "IN_PROGRESS" | "COMPLETED" | "ON_HOLD" | "CANCELLED";
+  taskID: number;
+  userID: number | null;
+  dateCreated: Date | null;
+  title: string;
+  dueDate: Date | null;
+  status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'ON_HOLD' | 'CANCELLED';
 }
 
 export interface TaskResponse {
@@ -33,10 +33,10 @@ export interface TaskResponse {
 
 export interface User {
   userId: number;
-    username: string | null;
-    email: string | null;
-    passwordHash: string | null;
-    dateCreated: Date | null;
+  username: string | null;
+  email: string | null;
+  passwordHash: string | null;
+  dateCreated: Date | null;
 }
 
 export interface UserResponse {
@@ -45,7 +45,6 @@ export interface UserResponse {
   message: string;
   user?: User | null;
 }
-
 
 export interface Category {
   categoryID: number;

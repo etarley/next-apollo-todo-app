@@ -14,6 +14,8 @@ import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { gql } from 'graphql-tag';
 import { NextRequest } from 'next/server';
 
+import { TimestampResolver, TimestampTypeDefinition } from 'graphql-scalars';
+
 const typeDefs = gql`
   #server test
   type Query {
@@ -28,6 +30,7 @@ const typeDefs = gql`
   #Schema definitions
   ${task}
   ${user}
+  ${TimestampTypeDefinition}
 
   #Query Types definitions
   ${queries}
@@ -44,6 +47,8 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
+  Timestamp: TimestampResolver,
+
   Query: {
     // server tests
     hello: () => 'world',
@@ -56,7 +61,7 @@ const resolvers = {
   },
   Mutation: {
     addTask,
-    addUser
+    addUser,
   },
 };
 const server = new ApolloServer({

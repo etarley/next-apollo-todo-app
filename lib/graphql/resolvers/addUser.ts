@@ -11,11 +11,14 @@ export async function addUser(
   },
 ): Promise<UserResponse> {
   try {
-    const newUser = await db.insert(users).values({
-      username: args.username,
-      email: args.email,
-      passwordHash: args.passwordHash, // Make sure to never store plain text passwords
-    }).returning(); // Adjust returning fields based on your requirement
+    const newUser = await db
+      .insert(users)
+      .values({
+        username: args.username,
+        email: args.email,
+        passwordHash: args.passwordHash, // Make sure to never store plain text passwords
+      })
+      .returning(); // Adjust returning fields based on your requirement
 
     return {
       code: '200',
