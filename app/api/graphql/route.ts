@@ -14,7 +14,7 @@ import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { gql } from 'graphql-tag';
 import { NextRequest } from 'next/server';
 
-import { TimestampResolver, TimestampTypeDefinition } from 'graphql-scalars';
+import { DateResolver, DateTypeDefinition } from 'graphql-scalars';
 
 const typeDefs = gql`
   #server test
@@ -30,7 +30,7 @@ const typeDefs = gql`
   #Schema definitions
   ${task}
   ${user}
-  ${TimestampTypeDefinition}
+  ${DateTypeDefinition}
 
   #Query Types definitions
   ${queries}
@@ -47,7 +47,7 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
-  Timestamp: TimestampResolver,
+  Date: DateResolver,
 
   Query: {
     // server tests

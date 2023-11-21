@@ -15,6 +15,20 @@
       "when": 1700213601393,
       "tag": "0001_even_molecule_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1700568606106,
+      "tag": "0002_strong_squadron_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1700569457818,
+      "tag": "0003_talented_lilandra",
+      "breakpoints": true
     }
   ]
 }

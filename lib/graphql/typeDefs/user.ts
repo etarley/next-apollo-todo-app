@@ -1,10 +1,10 @@
 const user = `#graphql
 type User {
-  id: ID!
+  userId: ID!
   username: String
   email: String
   passwordHash: String
-  dateCreated: Timestamp
+  dateCreated: Date
   tasks: [Task]
 }`;
 

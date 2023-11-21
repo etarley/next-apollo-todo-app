@@ -11,7 +11,8 @@ type Mutation {
   deleteTask(taskID: ID!): TaskResponse
 
   # Mutations for Users
-  addUser(username: String, email: String, password: String): UserResponse
+  login(email: String!, password: String!)
+  addUser(username: String, email: String, passwordHash: String): UserResponse
   updateUser(id: ID!, username: String, email: String, password: String): UserResponse
   deleteUser(id: ID!): UserResponse
 }`;
