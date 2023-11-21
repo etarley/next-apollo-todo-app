@@ -36,7 +36,7 @@ export interface User {
   username: string | null;
   email: string | null;
   passwordHash: string | null;
-  dateCreated: Date | null;
+  dateCreated: String | null;
 }
 
 export interface UserResponse {
